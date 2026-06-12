@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alex Rivera – Full-Stack Developer & UI Engineer crafting accessible, performant web experiences. Based in San Francisco." />
+  <meta name="keywords" content="full-stack developer, UI engineer, web accessibility, React, Node.js, portfolio" />
+  <meta name="author" content="Alex Rivera" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0F" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alex Rivera — Full-Stack Developer" />
+  <meta property="og:description" content="Crafting accessible, performant web experiences that put people first." />
+  <meta property="og:url" content="https://alexrivera.dev" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Alex Rivera Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alex Rivera — Full-Stack Developer" />
+  <meta name="twitter:description" content="Crafting accessible, performant web experiences that put people first." />
+  <meta name="twitter:image" content="assets/og-image.png" />
+  <meta name="twitter:creator" content="@alexrivera_dev" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://alexrivera.dev/" />
+
+  <!-- Preload critical assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/home.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Rivera",
+    "jobTitle": "Full-Stack Developer",
+    "url": "https://alexrivera.dev",
+    "sameAs": [
+      "https://github.com/alexrivera",
+      "https://linkedin.com/in/alexrivera",
+      "https://twitter.com/alexrivera_dev"
+    ],
+    "knowsAbout": ["Web Development", "Accessibility", "React", "Node.js"]
+  }
+  </script>
+
+  <title>Alex Rivera — Full-Stack Developer & UI Engineer</title>
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Alex Rivera – Home">
+        <span aria-hidden="true">AR</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+          <li><a href="pages/about.html" class="nav-link">About</a></li>
+          <li><a href="pages/projects.html" class="nav-link">Projects</a></li>
+          <li><a href="pages/blog.html" class="nav-link">Blog</a></li>
+          <li><a href="pages/contact.html" class="nav-link nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow" aria-hidden="true">Available for work</p>
+          <h1 id="hero-heading" class="hero-heading">
+            Building the web<br />
+            <em>with intention.</em>
+          </h1>
+          <p class="hero-description">
+            I'm <strong>Alex Rivera</strong>, a full-stack developer who obsesses over
+            accessibility, performance, and the craft of turning complex problems
+            into clean, human-centred interfaces.
+          </p>
+          <div class="hero-actions">
+            <a href="pages/projects.html" class="btn btn-primary">
+              View my work
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="pages/contact.html" class="btn btn-ghost">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-stats" role="list" aria-label="Career highlights">
+          <div class="stat" role="listitem">
+            <span class="stat-number" aria-label="6 years">6</span>
+            <span class="stat-label">Years experience</span>
+          </div>
+          <div class="stat" role="listitem">
+            <span class="stat-number" aria-label="40 plus projects">40+</span>
+            <span class="stat-label">Projects shipped</span>
+          </div>
+          <div class="stat" role="listitem">
+            <span class="stat-number" aria-label="12 clients">12</span>
+            <span class="stat-label">Happy clients</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-text">scroll</span>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="featured-projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="projects-heading" class="section-title">Selected work</h2>
+          <a href="pages/projects.html" class="section-link" aria-label="View all projects">
+            All projects <span aria-hidden="true">↗</span>
+          </a>
+        </header>
+
+        <ol class="projects-grid" role="list" aria-label="Featured projects">
+          <li class="project-card project-card--featured">
+            <article aria-labelledby="project-1-title">
+              <div class="project-meta">
+                <span class="project-tag">Web App</span>
+                <span class="project-year">
+                  <time datetime="2024">2024</time>
+                </span>
+              </div>
+              <h3 id="project-1-title" class="project-title">
+                <a href="pages/projects.html#clearpath" class="project-link">
+                  ClearPath Dashboard
+                </a>
+              </h3>
+              <p class="project-description">
+                Real-time analytics platform for logistics teams — reduced
+                decision latency by 40% through intelligent data visualisation.
+              </p>
+              <ul class="project-stack" role="list" aria-label="Technologies used">
+                <li>React</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>D3.js</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="project-card">
+            <article aria-labelledby="project-2-title">
+              <div class="project-meta">
+                <span class="project-tag">Design System</span>
+                <span class="project-year"><time datetime="2023">2023</time></span>
+              </div>
+              <h3 id="project-2-title" class="project-title">
+                <a href="pages/projects.html#prism" class="project-link">
+                  Prism Design System
+                </a>
+              </h3>
+              <p class="project-description">
+                Component library with WCAG 2.2 AA compliance built-in,
+                adopted by 4 product teams.
+              </p>
+              <ul class="project-stack" role="list" aria-label="Technologies used">
+                <li>TypeScript</li>
+                <li>Storybook</li>
+                <li>CSS Custom Properties</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="project-card">
+            <article aria-labelledby="project-3-title">
+              <div class="project-meta">
+                <span class="project-tag">E-Commerce</span>
+                <span class="project-year"><time datetime="2023">2023</time></span>
+              </div>
+              <h3 id="project-3-title" class="project-title">
+                <a href="pages/projects.html#folio" class="project-link">
+                  Folio Commerce
+                </a>
+              </h3>
+              <p class="project-description">
+                Headless storefront for an independent bookshop — 98 Lighthouse
+                score, 60% conversion improvement.
+              </p>
+              <ul class="project-stack" role="list" aria-label="Technologies used">
+                <li>Next.js</li>
+                <li>Shopify API</li>
+                <li>Tailwind</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills / Expertise -->
+    <section class="expertise" aria-labelledby="expertise-heading">
+      <div class="container">
+        <h2 id="expertise-heading" class="section-title">What I do</h2>
+        <dl class="expertise-grid">
+          <div class="expertise-item">
+            <dt class="expertise-title">
+              <span class="expertise-icon" aria-hidden="true">⬡</span>
+              Front-End Engineering
+            </dt>
+            <dd class="expertise-body">
+              Semantic HTML, modern CSS, React &amp; Svelte — built for performance
+              and accessibility from the ground up, not bolted on after.
+            </dd>
+          </div>
+
+          <div class="expertise-item">
+            <dt class="expertise-title">
+              <span class="expertise-icon" aria-hidden="true">⬡</span>
+              Back-End &amp; APIs
+            </dt>
+            <dd class="expertise-body">
+              Node.js, Python, REST and GraphQL APIs, PostgreSQL and Redis —
+              boring tech that simply works at scale.
+            </dd>
+          </div>
+
+          <div class="expertise-item">
+            <dt class="expertise-title">
+              <span class="expertise-icon" aria-hidden="true">⬡</span>
+              Accessibility &amp; WCAG
+            </dt>
+            <dd class="expertise-body">
+              WCAG 2.2 AA compliance, screen reader testing, keyboard navigation
+              audits — accessibility as a design constraint, not an afterthought.
+            </dd>
+          </div>
+
+          <div class="expertise-item">
+            <dt class="expertise-title">
+              <span class="expertise-icon" aria-hidden="true">⬡</span>
+              Performance &amp; Core Web Vitals
+            </dt>
+            <dd class="expertise-body">
+              Lighthouse 100s, sub-second LCP, zero layout shift — optimisation
+              strategies from asset pipeline to edge caching.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container cta-inner">
+        <h2 id="cta-heading" class="cta-title">Got a project in mind?</h2>
+        <p class="cta-body">
+          I'm open to freelance engagements and full-time roles.
+          Let's talk about what you're building.
+        </p>
+        <a href="pages/contact.html" class="btn btn-primary btn-large">
+          Start a conversation
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo" aria-label="Alex Rivera – Home">
+          <span aria-hidden="true">AR</span>
+        </a>
+        <p class="footer-tagline">Building with intention, shipping with care.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/projects.html">Projects</a></li>
+          <li><a href="pages/blog.html">Blog</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-social" aria-label="Social media links">
+        <ul role="list">
+          <li>
+            <a href="https://github.com/alexrivera" rel="noopener noreferrer" target="_blank"
+               aria-label="GitHub profile (opens in new tab)">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/alexrivera" rel="noopener noreferrer" target="_blank"
+               aria-label="LinkedIn profile (opens in new tab)">
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/alexrivera_dev" rel="noopener noreferrer" target="_blank"
+               aria-label="Twitter profile (opens in new tab)">
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>
+          <small>
+            &copy; <time id="footer-year" datetime="2025">2025</time> Alex Rivera.
+            Built with semantic HTML5 &amp; vanilla CSS.
+          </small>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

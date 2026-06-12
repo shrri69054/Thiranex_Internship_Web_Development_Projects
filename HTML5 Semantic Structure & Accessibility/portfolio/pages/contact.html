@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Alex Rivera – get in touch about freelance projects, full-time roles, or accessibility consultancy." />
+  <meta name="author" content="Alex Rivera" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0F" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact — Alex Rivera" />
+  <meta property="og:description" content="Get in touch about freelance projects, full-time roles, or accessibility consultancy." />
+  <meta property="og:url" content="https://alexrivera.dev/pages/contact.html" />
+  <meta property="og:image" content="../assets/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Alex Rivera" />
+
+  <link rel="canonical" href="https://alexrivera.dev/pages/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+
+  <title>Contact — Alex Rivera</title>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Alex Rivera – Home"><span aria-hidden="true">AR</span></a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link nav-cta active" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container">
+        <p class="page-eyebrow">Contact</p>
+        <h1 id="page-heading" class="page-title">Let's build<br /><em>something.</em></h1>
+      </div>
+    </section>
+
+    <section class="contact-section" aria-labelledby="contact-form-heading">
+      <div class="container contact-grid">
+
+        <!-- Contact Info -->
+        <aside class="contact-info" aria-labelledby="contact-info-heading">
+          <h2 id="contact-info-heading" class="contact-info-title">Get in touch</h2>
+          <p class="contact-info-body">
+            I'm available for freelance work and open to interesting full-time
+            opportunities. The best projects start with a conversation — no brief
+            required, just an idea.
+          </p>
+
+          <dl class="contact-details">
+            <div class="contact-detail-item">
+              <dt class="contact-detail-label">Email</dt>
+              <dd>
+                <a href="mailto:hello@alexrivera.dev" class="contact-detail-value">
+                  hello@alexrivera.dev
+                </a>
+              </dd>
+            </div>
+            <div class="contact-detail-item">
+              <dt class="contact-detail-label">Location</dt>
+              <dd class="contact-detail-value">San Francisco, CA <span aria-label="(remote friendly)">(remote friendly)</span></dd>
+            </div>
+            <div class="contact-detail-item">
+              <dt class="contact-detail-label">Response time</dt>
+              <dd class="contact-detail-value">Usually within 24 hours</dd>
+            </div>
+          </dl>
+
+          <nav class="contact-social" aria-label="Social and professional profiles">
+            <ul role="list">
+              <li>
+                <a href="https://github.com/alexrivera" rel="noopener noreferrer" target="_blank"
+                   aria-label="GitHub profile (opens in new tab)">
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/alexrivera" rel="noopener noreferrer" target="_blank"
+                   aria-label="LinkedIn profile (opens in new tab)">
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/alexrivera_dev" rel="noopener noreferrer" target="_blank"
+                   aria-label="Twitter profile (opens in new tab)">
+                  Twitter
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <h2 id="contact-form-heading" class="visually-hidden">Send a message</h2>
+
+          <!-- Success message (hidden by default, shown via JS) -->
+          <div
+            class="form-success"
+            id="form-success"
+            role="alert"
+            aria-live="polite"
+            aria-atomic="true"
+            hidden
+          >
+            <p>
+              <strong>Message sent!</strong>
+              Thanks for reaching out. I'll be in touch within 24 hours.
+            </p>
+          </div>
+
+          <!-- Error message (hidden by default) -->
+          <div
+            class="form-error-banner"
+            id="form-error-banner"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+            hidden
+          >
+            <p id="form-error-message">
+              Something went wrong. Please review the fields below and try again.
+            </p>
+          </div>
+
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="/api/contact"
+            method="POST"
+            novalidate
+            aria-label="Contact form"
+            aria-describedby="form-instructions"
+          >
+            <p id="form-instructions" class="form-instructions">
+              Fields marked with <abbr title="required" aria-label="required">*</abbr> are required.
+            </p>
+
+            <!-- Name -->
+            <div class="form-group" id="group-name">
+              <label class="form-label" for="name">
+                Full name <abbr title="required" aria-hidden="true">*</abbr>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                required
+                aria-required="true"
+                autocomplete="name"
+                aria-describedby="name-error"
+                placeholder="Jane Smith"
+                spellcheck="false"
+              />
+              <span
+                class="form-field-error"
+                id="name-error"
+                role="alert"
+                aria-live="polite"
+                hidden
+              ></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group" id="group-email">
+              <label class="form-label" for="email">
+                Email address <abbr title="required" aria-hidden="true">*</abbr>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                required
+                aria-required="true"
+                autocomplete="email"
+                aria-describedby="email-error email-hint"
+                placeholder="jane@example.com"
+              />
+              <span id="email-hint" class="form-hint">
+                I'll only use this to reply to your message.
+              </span>
+              <span
+                class="form-field-error"
+                id="email-error"
+                role="alert"
+                aria-live="polite"
+                hidden
+              ></span>
+            </div>
+
+            <!-- Subject / Enquiry type -->
+            <div class="form-group" id="group-subject">
+              <label class="form-label" for="subject">
+                What's this about? <abbr title="required" aria-hidden="true">*</abbr>
+              </label>
+              <select
+                id="subject"
+                name="subject"
+                class="form-select"
+                required
+                aria-required="true"
+                aria-describedby="subject-error"
+              >
+                <option value="" disabled selected>Select an option…</option>
+                <option value="freelance">Freelance project</option>
+                <option value="fulltime">Full-time opportunity</option>
+                <option value="accessibility">Accessibility consultancy</option>
+                <option value="collaboration">Open-source collaboration</option>
+                <option value="speaking">Speaking / writing</option>
+                <option value="other">Something else</option>
+              </select>
+              <span
+                class="form-field-error"
+                id="subject-error"
+                role="alert"
+                aria-live="polite"
+                hidden
+              ></span>
+            </div>
+
+            <!-- Budget (optional) -->
+            <div class="form-group" id="group-budget">
+              <label class="form-label" for="budget">
+                Approximate budget
+                <span class="form-optional">(optional)</span>
+              </label>
+              <select
+                id="budget"
+                name="budget"
+                class="form-select"
+                aria-describedby="budget-hint"
+              >
+                <option value="" selected>Prefer not to say</option>
+                <option value="under5k">Under $5,000</option>
+                <option value="5k-15k">$5,000 – $15,000</option>
+                <option value="15k-50k">$15,000 – $50,000</option>
+                <option value="50k-plus">$50,000+</option>
+              </select>
+              <span id="budget-hint" class="form-hint">
+                Rough ranges help me respond with the right context.
+              </span>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group" id="group-message">
+              <label class="form-label" for="message">
+                Message <abbr title="required" aria-hidden="true">*</abbr>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-textarea"
+                rows="6"
+                required
+                aria-required="true"
+                aria-describedby="message-error message-hint"
+                minlength="20"
+                placeholder="Tell me about your project, timeline, or any questions you have…"
+              ></textarea>
+              <span id="message-hint" class="form-hint">
+                Minimum 20 characters. The more context the better.
+              </span>
+              <span
+                class="form-field-error"
+                id="message-error"
+                role="alert"
+                aria-live="polite"
+                hidden
+              ></span>
+            </div>
+
+            <!-- Consent -->
+            <div class="form-group form-group--checkbox" id="group-consent">
+              <div class="checkbox-wrap">
+                <input
+                  type="checkbox"
+                  id="consent"
+                  name="consent"
+                  class="form-checkbox"
+                  required
+                  aria-required="true"
+                  aria-describedby="consent-error"
+                />
+                <label class="form-label form-label--checkbox" for="consent">
+                  I agree to my data being stored to handle this enquiry.
+                  <abbr title="required" aria-hidden="true">*</abbr>
+                  <a href="#privacy" class="form-inline-link">Privacy policy</a>
+                </label>
+              </div>
+              <span
+                class="form-field-error"
+                id="consent-error"
+                role="alert"
+                aria-live="polite"
+                hidden
+              ></span>
+            </div>
+
+            <div class="form-actions">
+              <button
+                type="submit"
+                class="btn btn-primary btn-large"
+                id="submit-btn"
+                aria-describedby="submit-status"
+              >
+                Send message
+              </button>
+              <span id="submit-status" class="visually-hidden" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Note -->
+    <section class="privacy-note" id="privacy" aria-labelledby="privacy-heading">
+      <div class="container">
+        <h2 id="privacy-heading" class="privacy-title">Privacy</h2>
+        <p>
+          Information submitted via this form is used solely to respond to your
+          enquiry. It is not shared with third parties, stored longer than 90 days
+          after the conversation ends, or used for marketing.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo footer-logo" aria-label="Alex Rivera – Home"><span aria-hidden="true">AR</span></a>
+        <p class="footer-tagline">Building with intention, shipping with care.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-social" aria-label="Social media links">
+        <ul role="list">
+          <li><a href="https://github.com/alexrivera" rel="noopener noreferrer" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/alexrivera" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p><small>&copy; <time id="footer-year" datetime="2025">2025</time> Alex Rivera.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/contact-form.js"></script>
+</body>
+</html>

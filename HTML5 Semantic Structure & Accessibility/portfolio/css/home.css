@@ -1,0 +1,308 @@
+/* ============================================================
+   HOME.CSS — Index page styles
+   ============================================================ */
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding-block: var(--space-24) var(--space-20);
+  overflow: hidden;
+}
+
+/* Ambient glow */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(80vw, 60rem);
+  height: 30rem;
+  background: radial-gradient(ellipse, rgba(91,139,245,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-12);
+  align-items: end;
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-success);
+  margin-bottom: var(--space-5);
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-success);
+  box-shadow: 0 0 8px var(--color-success);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-eyebrow::before { animation: none; }
+}
+
+.hero-heading {
+  font-size: var(--text-3xl);
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+}
+
+.hero-heading em {
+  font-style: normal;
+  color: var(--color-text-muted);
+}
+
+.hero-description {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin-bottom: var(--space-8);
+  line-height: 1.75;
+}
+
+.hero-description strong { color: var(--color-text); font-weight: 600; }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  align-self: center;
+  padding-left: var(--space-8);
+  border-left: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-direction: row;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-8);
+    flex-wrap: wrap;
+    gap: var(--space-6) var(--space-10);
+  }
+}
+
+.stat {}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Scroll indicator */
+.hero-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-line {
+  display: block;
+  width: 1px;
+  height: 3rem;
+  background: linear-gradient(to bottom, transparent, var(--color-border));
+}
+
+.scroll-text {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  writing-mode: vertical-lr;
+}
+
+/* ── Featured Projects ───────────────────────────────────── */
+.featured-projects {
+  padding-block: var(--space-24);
+  border-top: 1px solid var(--color-border);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .projects-grid { grid-template-columns: 1fr 1fr; }
+  .project-card--featured { grid-column: span 2; }
+}
+
+@media (max-width: 580px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card--featured { grid-column: span 1; }
+}
+
+.project-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  transition: border-color var(--transition-normal), transform var(--transition-normal),
+              box-shadow var(--transition-normal);
+}
+
+.project-card:hover {
+  border-color: rgba(91,139,245,0.25);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card--featured {
+  background: var(--color-surface-2);
+  border-color: rgba(91,139,245,0.15);
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.project-year {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}
+
+.project-title {
+  font-size: var(--text-md);
+  margin-bottom: var(--space-3);
+}
+
+.project-link {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.project-link:hover { color: var(--color-accent-hover); }
+
+.project-description {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+/* ── Expertise ───────────────────────────────────────────── */
+.expertise {
+  padding-block: var(--space-24);
+  background: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+@media (max-width: 640px) {
+  .expertise-grid { grid-template-columns: 1fr; }
+}
+
+.expertise-item { padding: var(--space-6) 0; }
+
+.expertise-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.expertise-icon {
+  color: var(--color-accent);
+  font-size: 1.1em;
+}
+
+.expertise-body {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ── CTA Banner ──────────────────────────────────────────── */
+.cta-banner {
+  padding-block: var(--space-24);
+}
+
+.cta-inner {
+  text-align: center;
+}
+
+.cta-title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+}
+
+.cta-body {
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+  max-width: 44ch;
+  margin-inline: auto;
+  margin-bottom: var(--space-8);
+}

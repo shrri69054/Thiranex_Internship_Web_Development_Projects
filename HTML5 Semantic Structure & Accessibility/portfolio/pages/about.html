@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Alex Rivera – Full-Stack Developer with 6 years building accessible, performant web applications. Background in design, obsession with craft." />
+  <meta name="author" content="Alex Rivera" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0F" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="About — Alex Rivera" />
+  <meta property="og:description" content="Full-Stack Developer with 6 years building accessible, performant web applications." />
+  <meta property="og:url" content="https://alexrivera.dev/pages/about.html" />
+  <meta property="og:image" content="../assets/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About — Alex Rivera" />
+  <meta name="twitter:description" content="Full-Stack Developer with 6 years building accessible, performant web applications." />
+
+  <link rel="canonical" href="https://alexrivera.dev/pages/about.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Alex Rivera",
+    "url": "https://alexrivera.dev/pages/about.html",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Alex Rivera",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Full-Stack Developer with 6 years building accessible, performant web applications."
+    }
+  }
+  </script>
+
+  <title>About — Alex Rivera</title>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Alex Rivera – Home">
+        <span aria-hidden="true">AR</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container">
+        <p class="page-eyebrow">About</p>
+        <h1 id="page-heading" class="page-title">The person<br /><em>behind the code.</em></h1>
+      </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="bio" aria-labelledby="bio-heading">
+      <div class="container bio-grid">
+        <div class="bio-image-wrap">
+          <figure>
+            <img
+              src="../assets/alex-portrait.jpg"
+              alt="Alex Rivera smiling, seated at a desk with dual monitors showing code editor and browser"
+              width="480"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption class="visually-hidden">
+              Alex Rivera at work in their San Francisco home studio.
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="bio-text">
+          <h2 id="bio-heading" class="visually-hidden">Biography</h2>
+          <p class="bio-lead">
+            I started making websites in 2018 out of frustration that
+            beautiful designs were almost always inaccessible to someone.
+          </p>
+          <p>
+            Today I split my time between client work and contributing to
+            open-source accessibility tooling. My background is unusual for
+            a developer — I studied graphic design, worked in print, then
+            fell sideways into code. That path gave me opinions about
+            type, whitespace, and reading flow that a CS degree might have
+            crowded out.
+          </p>
+          <p>
+            I'm based in San Francisco but work with teams worldwide.
+            When I'm not at the keyboard I'm usually reading speculative
+            fiction, cooking badly, or hiking the Marin Headlands.
+          </p>
+          <a href="../assets/alex-rivera-cv.pdf" class="btn btn-ghost" download
+             aria-label="Download Alex Rivera's CV as PDF">
+            Download CV (PDF)
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience" aria-labelledby="experience-heading">
+      <div class="container">
+        <h2 id="experience-heading" class="section-title">Experience</h2>
+
+        <ol class="timeline" aria-label="Work experience timeline">
+          <li class="timeline-item">
+            <article aria-labelledby="job-1">
+              <header class="timeline-header">
+                <h3 id="job-1" class="timeline-role">Senior Frontend Engineer</h3>
+                <div class="timeline-meta">
+                  <span class="timeline-company">Luminary Labs</span>
+                  <span aria-hidden="true">·</span>
+                  <time class="timeline-period" datetime="2022">2022</time>
+                  <span aria-hidden="true">–</span>
+                  <span>Present</span>
+                </div>
+              </header>
+              <p class="timeline-description">
+                Lead frontend on a 6-person product team building B2B SaaS for
+                the logistics sector. Introduced design system, cut CSS bundle
+                by 60%, and established accessibility audit process.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <article aria-labelledby="job-2">
+              <header class="timeline-header">
+                <h3 id="job-2" class="timeline-role">Full-Stack Developer</h3>
+                <div class="timeline-meta">
+                  <span class="timeline-company">Freelance</span>
+                  <span aria-hidden="true">·</span>
+                  <time class="timeline-period" datetime="2020">2020</time>
+                  <span aria-hidden="true">–</span>
+                  <time datetime="2022">2022</time>
+                </div>
+              </header>
+              <p class="timeline-description">
+                Built web applications for 8 clients across e-commerce, publishing,
+                and non-profit sectors. All projects achieved WCAG 2.1 AA compliance.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <article aria-labelledby="job-3">
+              <header class="timeline-header">
+                <h3 id="job-3" class="timeline-role">Web Developer</h3>
+                <div class="timeline-meta">
+                  <span class="timeline-company">Bright Agency</span>
+                  <span aria-hidden="true">·</span>
+                  <time class="timeline-period" datetime="2018">2018</time>
+                  <span aria-hidden="true">–</span>
+                  <time datetime="2020">2020</time>
+                </div>
+              </header>
+              <p class="timeline-description">
+                Joined as a junior, left as the team's go-to for anything
+                accessibility or performance related. Delivered 12+ client sites.
+              </p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <h2 id="skills-heading" class="section-title">Technical skills</h2>
+
+        <dl class="skills-grid">
+          <div class="skill-group">
+            <dt class="skill-category">Languages</dt>
+            <dd>
+              <ul class="skill-list" role="list">
+                <li>HTML5</li><li>CSS / Sass</li><li>JavaScript (ES2024)</li>
+                <li>TypeScript</li><li>Python</li><li>SQL</li>
+              </ul>
+            </dd>
+          </div>
+
+          <div class="skill-group">
+            <dt class="skill-category">Frameworks &amp; Libraries</dt>
+            <dd>
+              <ul class="skill-list" role="list">
+                <li>React &amp; Next.js</li><li>Svelte</li><li>Node.js</li>
+                <li>Express</li><li>D3.js</li><li>Storybook</li>
+              </ul>
+            </dd>
+          </div>
+
+          <div class="skill-group">
+            <dt class="skill-category">Tools &amp; Platforms</dt>
+            <dd>
+              <ul class="skill-list" role="list">
+                <li>Git / GitHub</li><li>Docker</li><li>Vercel</li>
+                <li>PostgreSQL</li><li>Redis</li><li>Figma</li>
+              </ul>
+            </dd>
+          </div>
+
+          <div class="skill-group">
+            <dt class="skill-category">Accessibility</dt>
+            <dd>
+              <ul class="skill-list" role="list">
+                <li>WCAG 2.2 AA/AAA</li><li>ARIA patterns</li>
+                <li>NVDA / VoiceOver</li><li>axe DevTools</li>
+                <li>Lighthouse audits</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo footer-logo" aria-label="Alex Rivera – Home">
+          <span aria-hidden="true">AR</span>
+        </a>
+        <p class="footer-tagline">Building with intention, shipping with care.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-social" aria-label="Social media links">
+        <ul role="list">
+          <li><a href="https://github.com/alexrivera" rel="noopener noreferrer" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/alexrivera" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+          <li><a href="https://twitter.com/alexrivera_dev" rel="noopener noreferrer" target="_blank" aria-label="Twitter (opens in new tab)">Twitter</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p><small>&copy; <time id="footer-year" datetime="2025">2025</time> Alex Rivera. Built with semantic HTML5 &amp; vanilla CSS.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

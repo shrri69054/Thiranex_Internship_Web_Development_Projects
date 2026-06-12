@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog by Alex Rivera – writing on web accessibility, performance engineering, and the craft of front-end development." />
+  <meta name="author" content="Alex Rivera" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0F" />
+
+  <meta property="og:type" content="blog" />
+  <meta property="og:title" content="Blog — Alex Rivera" />
+  <meta property="og:description" content="Writing on web accessibility, performance engineering, and front-end craft." />
+  <meta property="og:url" content="https://alexrivera.dev/pages/blog.html" />
+  <meta property="og:image" content="../assets/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog — Alex Rivera" />
+
+  <link rel="canonical" href="https://alexrivera.dev/pages/blog.html" />
+  <link rel="alternate" type="application/rss+xml" title="Alex Rivera Blog Feed" href="../feed.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+
+  <title>Blog — Alex Rivera</title>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Alex Rivera – Home"><span aria-hidden="true">AR</span></a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="blog.html" class="nav-link active" aria-current="page">Blog</a></li>
+          <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container">
+        <p class="page-eyebrow">Blog</p>
+        <h1 id="page-heading" class="page-title">Thinking<br /><em>out loud.</em></h1>
+        <p class="page-subtitle">Writing on accessibility, performance, and front-end craft.</p>
+      </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="blog-featured" aria-labelledby="featured-article-heading">
+      <div class="container">
+        <h2 id="featured-article-heading" class="visually-hidden">Featured article</h2>
+        <article class="article-card article-card--featured" aria-labelledby="feat-article-title">
+          <div class="article-card-inner">
+            <header>
+              <div class="article-meta">
+                <span class="article-tag">Accessibility</span>
+                <time class="article-date" datetime="2024-11-14">November 14, 2024</time>
+                <span class="article-read-time">8 min read</span>
+              </div>
+              <h3 id="feat-article-title" class="article-title">
+                <a href="#" class="article-link">
+                  Why "accessible" and "beautiful" aren't trade-offs anymore
+                </a>
+              </h3>
+            </header>
+            <p class="article-excerpt">
+              The old assumption that accessibility means sacrificing aesthetics
+              was always wrong, but the tooling finally caught up. Here's how
+              I design to WCAG constraints first and let the beauty follow.
+            </p>
+            <footer class="article-footer">
+              <a href="#" class="btn btn-ghost btn-small" aria-label="Read full article: Why accessible and beautiful aren't trade-offs anymore">
+                Read article <span aria-hidden="true">→</span>
+              </a>
+            </footer>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Article Grid -->
+    <section class="blog-grid-section" aria-labelledby="recent-posts-heading">
+      <div class="container">
+        <h2 id="recent-posts-heading" class="section-title">Recent posts</h2>
+
+        <ol class="blog-grid" role="list" aria-label="Blog posts">
+
+          <li>
+            <article class="article-card" aria-labelledby="article-2-title">
+              <header>
+                <div class="article-meta">
+                  <span class="article-tag">Performance</span>
+                  <time class="article-date" datetime="2024-10-02">October 2, 2024</time>
+                  <span class="article-read-time">6 min read</span>
+                </div>
+                <h3 id="article-2-title" class="article-title">
+                  <a href="#" class="article-link">
+                    Core Web Vitals: the one change that moved our LCP from 3.8s to 0.9s
+                  </a>
+                </h3>
+              </header>
+              <p class="article-excerpt">
+                It wasn't the cache headers. It wasn't the image format.
+                It was a single render-blocking font request no one noticed.
+              </p>
+              <footer class="article-footer">
+                <a href="#" class="article-read-more" aria-label="Read: Core Web Vitals article">
+                  Read <span aria-hidden="true">→</span>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+          <li>
+            <article class="article-card" aria-labelledby="article-3-title">
+              <header>
+                <div class="article-meta">
+                  <span class="article-tag">CSS</span>
+                  <time class="article-date" datetime="2024-09-18">September 18, 2024</time>
+                  <span class="article-read-time">5 min read</span>
+                </div>
+                <h3 id="article-3-title" class="article-title">
+                  <a href="#" class="article-link">
+                    CSS custom properties as a design token pipeline
+                  </a>
+                </h3>
+              </header>
+              <p class="article-excerpt">
+                How we replaced Sass variables with a single source of truth
+                that every team — design, web, mobile — reads from.
+              </p>
+              <footer class="article-footer">
+                <a href="#" class="article-read-more" aria-label="Read: CSS custom properties article">
+                  Read <span aria-hidden="true">→</span>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+          <li>
+            <article class="article-card" aria-labelledby="article-4-title">
+              <header>
+                <div class="article-meta">
+                  <span class="article-tag">Accessibility</span>
+                  <time class="article-date" datetime="2024-08-05">August 5, 2024</time>
+                  <span class="article-read-time">10 min read</span>
+                </div>
+                <h3 id="article-4-title" class="article-title">
+                  <a href="#" class="article-link">
+                    Testing with NVDA: a developer's field notes
+                  </a>
+                </h3>
+              </header>
+              <p class="article-excerpt">
+                Six months of weekly NVDA sessions taught me more about
+                HTML semantics than ten years of building websites.
+              </p>
+              <footer class="article-footer">
+                <a href="#" class="article-read-more" aria-label="Read: NVDA testing article">
+                  Read <span aria-hidden="true">→</span>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+          <li>
+            <article class="article-card" aria-labelledby="article-5-title">
+              <header>
+                <div class="article-meta">
+                  <span class="article-tag">Career</span>
+                  <time class="article-date" datetime="2024-07-21">July 21, 2024</time>
+                  <span class="article-read-time">4 min read</span>
+                </div>
+                <h3 id="article-5-title" class="article-title">
+                  <a href="#" class="article-link">
+                    From graphic designer to developer: what transferred, what didn't
+                  </a>
+                </h3>
+              </header>
+              <p class="article-excerpt">
+                Design school gave me a sensitivity to whitespace and
+                type hierarchy that I'd never trade. But it also gave me
+                some habits that took years to unlearn.
+              </p>
+              <footer class="article-footer">
+                <a href="#" class="article-read-more" aria-label="Read: career transition article">
+                  Read <span aria-hidden="true">→</span>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <aside class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container newsletter-inner">
+        <h2 id="newsletter-heading" class="newsletter-title">Get new posts in your inbox</h2>
+        <p class="newsletter-body">
+          No cadence pressure, no sponsored content. Just the article when it's ready.
+        </p>
+        <form class="newsletter-form" action="/api/subscribe" method="POST"
+              aria-label="Newsletter subscription form" novalidate>
+          <div class="newsletter-field">
+            <label for="newsletter-email" class="visually-hidden">Email address</label>
+            <input
+              type="email"
+              id="newsletter-email"
+              name="email"
+              class="newsletter-input"
+              placeholder="your@email.com"
+              required
+              autocomplete="email"
+              aria-required="true"
+              aria-describedby="newsletter-hint"
+            />
+            <span id="newsletter-hint" class="visually-hidden">
+              Enter your email address to subscribe to the blog newsletter.
+            </span>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo footer-logo" aria-label="Alex Rivera – Home"><span aria-hidden="true">AR</span></a>
+        <p class="footer-tagline">Building with intention, shipping with care.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-social" aria-label="Social media links">
+        <ul role="list">
+          <li><a href="https://github.com/alexrivera" rel="noopener noreferrer" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/alexrivera" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p><small>&copy; <time id="footer-year" datetime="2025">2025</time> Alex Rivera.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

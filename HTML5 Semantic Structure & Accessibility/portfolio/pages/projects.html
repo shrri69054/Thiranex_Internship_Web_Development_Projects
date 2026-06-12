@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projects by Alex Rivera – full-stack web applications, design systems, and e-commerce builds. React, Node.js, WCAG-compliant." />
+  <meta name="author" content="Alex Rivera" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0A0A0F" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Projects — Alex Rivera" />
+  <meta property="og:description" content="Full-stack web applications, design systems, and e-commerce builds." />
+  <meta property="og:url" content="https://alexrivera.dev/pages/projects.html" />
+  <meta property="og:image" content="../assets/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Projects — Alex Rivera" />
+
+  <link rel="canonical" href="https://alexrivera.dev/pages/projects.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/projects.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg" />
+
+  <title>Projects — Alex Rivera</title>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="Alex Rivera – Home"><span aria-hidden="true">AR</span></a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link active" aria-current="page">Projects</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+
+    <section class="page-hero" aria-labelledby="page-heading">
+      <div class="container">
+        <p class="page-eyebrow">Projects</p>
+        <h1 id="page-heading" class="page-title">Work that<br /><em>ships.</em></h1>
+      </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="projects-filter" aria-labelledby="filter-heading">
+      <div class="container">
+        <h2 id="filter-heading" class="visually-hidden">Filter projects by category</h2>
+        <div class="filter-controls" role="group" aria-label="Filter by project type">
+          <button class="filter-btn filter-btn--active" aria-pressed="true" data-filter="all">
+            All <span class="filter-count" aria-label="8 projects">8</span>
+          </button>
+          <button class="filter-btn" aria-pressed="false" data-filter="web-app">Web App</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="design-system">Design System</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="ecommerce">E-Commerce</button>
+          <button class="filter-btn" aria-pressed="false" data-filter="open-source">Open Source</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects List -->
+    <section class="projects-list" aria-labelledby="projects-list-heading">
+      <div class="container">
+        <h2 id="projects-list-heading" class="visually-hidden">All projects</h2>
+
+        <ol class="project-items" role="list" aria-label="Project list">
+
+          <!-- Project 1 -->
+          <li id="clearpath" class="project-item" data-category="web-app">
+            <article aria-labelledby="proj-clearpath-title">
+              <div class="project-item-inner">
+                <header class="project-item-header">
+                  <div class="project-item-meta">
+                    <span class="project-tag">Web App</span>
+                    <time class="project-year" datetime="2024">2024</time>
+                  </div>
+                  <h3 id="proj-clearpath-title" class="project-item-title">ClearPath Dashboard</h3>
+                </header>
+                <p class="project-item-description">
+                  Real-time analytics platform for logistics teams. Built a WebSocket-powered
+                  data pipeline and visualisation layer that reduced decision latency by 40%.
+                  Achieved WCAG 2.2 AA on all interactive chart components.
+                </p>
+                <ul class="project-stack" role="list" aria-label="Technologies used in ClearPath">
+                  <li>React</li><li>Node.js</li><li>PostgreSQL</li><li>D3.js</li><li>WebSockets</li>
+                </ul>
+                <footer class="project-item-links">
+                  <a href="https://github.com/alexrivera/clearpath" rel="noopener noreferrer" target="_blank"
+                     aria-label="ClearPath Dashboard source code on GitHub (opens in new tab)" class="project-link-btn">
+                    Source <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="https://clearpath.demo.alexrivera.dev" rel="noopener noreferrer" target="_blank"
+                     aria-label="ClearPath Dashboard live demo (opens in new tab)" class="project-link-btn project-link-btn--primary">
+                    Live Demo <span aria-hidden="true">↗</span>
+                  </a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <!-- Project 2 -->
+          <li id="prism" class="project-item" data-category="design-system">
+            <article aria-labelledby="proj-prism-title">
+              <div class="project-item-inner">
+                <header class="project-item-header">
+                  <div class="project-item-meta">
+                    <span class="project-tag">Design System</span>
+                    <time class="project-year" datetime="2023">2023</time>
+                  </div>
+                  <h3 id="proj-prism-title" class="project-item-title">Prism Design System</h3>
+                </header>
+                <p class="project-item-description">
+                  60-component library with WCAG 2.2 AA compliance built into every token.
+                  Adopted by 4 product teams at Luminary Labs, eliminating 80% of per-project
+                  accessibility remediation work.
+                </p>
+                <ul class="project-stack" role="list" aria-label="Technologies used in Prism">
+                  <li>TypeScript</li><li>Storybook</li><li>CSS Custom Properties</li><li>axe-core</li>
+                </ul>
+                <footer class="project-item-links">
+                  <a href="https://github.com/alexrivera/prism-ds" rel="noopener noreferrer" target="_blank"
+                     aria-label="Prism Design System source code on GitHub (opens in new tab)" class="project-link-btn">
+                    Source <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="https://prism.alexrivera.dev" rel="noopener noreferrer" target="_blank"
+                     aria-label="Prism Design System documentation (opens in new tab)" class="project-link-btn project-link-btn--primary">
+                    Docs <span aria-hidden="true">↗</span>
+                  </a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <!-- Project 3 -->
+          <li id="folio" class="project-item" data-category="ecommerce">
+            <article aria-labelledby="proj-folio-title">
+              <div class="project-item-inner">
+                <header class="project-item-header">
+                  <div class="project-item-meta">
+                    <span class="project-tag">E-Commerce</span>
+                    <time class="project-year" datetime="2023">2023</time>
+                  </div>
+                  <h3 id="proj-folio-title" class="project-item-title">Folio Commerce</h3>
+                </header>
+                <p class="project-item-description">
+                  Headless Shopify storefront for an independent SF bookshop.
+                  98 Lighthouse score, 60% conversion uplift vs previous site,
+                  full keyboard navigation throughout checkout flow.
+                </p>
+                <ul class="project-stack" role="list" aria-label="Technologies used in Folio">
+                  <li>Next.js</li><li>Shopify Storefront API</li><li>Tailwind</li>
+                </ul>
+                <footer class="project-item-links">
+                  <a href="https://foliobooks.com" rel="noopener noreferrer" target="_blank"
+                     aria-label="Folio Commerce live site (opens in new tab)" class="project-link-btn project-link-btn--primary">
+                    Live Site <span aria-hidden="true">↗</span>
+                  </a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+          <!-- Project 4 -->
+          <li class="project-item" data-category="open-source">
+            <article aria-labelledby="proj-a11y-title">
+              <div class="project-item-inner">
+                <header class="project-item-header">
+                  <div class="project-item-meta">
+                    <span class="project-tag">Open Source</span>
+                    <time class="project-year" datetime="2022">2022</time>
+                  </div>
+                  <h3 id="proj-a11y-title" class="project-item-title">a11y-form-hints</h3>
+                </header>
+                <p class="project-item-description">
+                  Lightweight (2kb) library for accessible inline form validation messages
+                  compatible with any framework. 400+ GitHub stars, used in 3 npm packages.
+                </p>
+                <ul class="project-stack" role="list" aria-label="Technologies used in a11y-form-hints">
+                  <li>JavaScript</li><li>ARIA</li><li>npm</li>
+                </ul>
+                <footer class="project-item-links">
+                  <a href="https://github.com/alexrivera/a11y-form-hints" rel="noopener noreferrer" target="_blank"
+                     aria-label="a11y-form-hints source code on GitHub (opens in new tab)" class="project-link-btn">
+                    Source <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="https://www.npmjs.com/package/a11y-form-hints" rel="noopener noreferrer" target="_blank"
+                     aria-label="a11y-form-hints on npm (opens in new tab)" class="project-link-btn project-link-btn--primary">
+                    npm <span aria-hidden="true">↗</span>
+                  </a>
+                </footer>
+              </div>
+            </article>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo footer-logo" aria-label="Alex Rivera – Home"><span aria-hidden="true">AR</span></a>
+        <p class="footer-tagline">Building with intention, shipping with care.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-social" aria-label="Social media links">
+        <ul role="list">
+          <li><a href="https://github.com/alexrivera" rel="noopener noreferrer" target="_blank" aria-label="GitHub (opens in new tab)">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/alexrivera" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn (opens in new tab)">LinkedIn</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p><small>&copy; <time id="footer-year" datetime="2025">2025</time> Alex Rivera.</small></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/projects-filter.js"></script>
+</body>
+</html>
