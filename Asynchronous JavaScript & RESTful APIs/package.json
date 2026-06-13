@@ -1,0 +1,18 @@
+{
+  "name": "skycast-weather-dashboard",
+  "version": "1.0.0",
+  "description": "Real-time Weather Dashboard using Fetch API & async/await",
+  "main": "index.html",
+  "scripts": {
+    "lint": "eslint js/*.js",
+    "validate": "html-validate index.html",
+    "serve": "npx serve ."
+  },
+  "keywords": ["weather", "dashboard", "fetch-api", "async-await", "javascript", "openweathermap"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "html-validate": "^9.0.0"
+  }
+}
