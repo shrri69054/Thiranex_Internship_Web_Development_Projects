@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════
+   LAYOUT — CSS Grid & Flexbox Architecture
+   Mobile-first approach
+═══════════════════════════════════════ */
+
+/* ── Navigation ── */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid var(--border-default);
+  transition: background var(--duration-slow) var(--ease-out),
+              border-color var(--duration-slow) var(--ease-out);
+}
+
+.site-header.scrolled {
+  background: var(--nav-bg);
+  box-shadow: var(--shadow-md);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  height: 100%;
+  gap: var(--space-8);
+}
+
+.nav-links {
+  display: none;          /* Hidden mobile — shown ≥768 */
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ── Mobile menu ── */
+.mobile-menu {
+  position: fixed;
+  inset: var(--nav-height) 0 0 0;
+  background: var(--bg-surface);
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border-top: 1px solid var(--border-default);
+  z-index: 99;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform var(--duration-base) var(--ease-out),
+              opacity var(--duration-base) var(--ease-out);
+}
+
+.mobile-menu:not([hidden]) {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu[hidden] {
+  display: flex !important; /* Override HTML hidden so CSS transition works */
+}
+
+/* ── Main layout wrapper ── */
+main {
+  padding-top: var(--nav-height);
+}
+
+/* ── Section base ── */
+.section {
+  padding: var(--space-16) 0;
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.section-header {
+  margin-bottom: var(--space-12);
+}
+
+/* ── HERO — CSS Grid two-column ── */
+.hero {
+  min-height: calc(100svh - var(--nav-height));
+  background: var(--grad-hero);
+  display: grid;
+  place-items: center;
+  padding: var(--space-12) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.hero-grid {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+
+  /* Stack on mobile */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+/* ── PROJECTS — CSS Grid auto-fill ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* ── SKILLS — CSS Grid three equal columns ── */
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+/* ── ABOUT — CSS Grid asymmetric ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+/* ── CONTACT — CSS Grid two-column ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  border-top: 1px solid var(--border-default);
+  padding: var(--space-8) 0;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: center;
+  text-align: center;
+}

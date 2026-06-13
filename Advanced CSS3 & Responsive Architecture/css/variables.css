@@ -1,0 +1,142 @@
+/* ═══════════════════════════════════════
+   VARIABLES — Design Tokens
+   Mobile-first CSS custom properties
+═══════════════════════════════════════ */
+
+/* ── Dark theme (default) ── */
+:root,
+[data-theme="dark"] {
+  /* Surface */
+  --bg-base:        #080B10;
+  --bg-surface:     #0E1320;
+  --bg-elevated:    #141A28;
+  --bg-overlay:     #1C2438;
+
+  /* Text */
+  --text-primary:   #E8EEF8;
+  --text-secondary: #8B97B5;
+  --text-muted:     #4A5568;
+  --text-inverse:   #080B10;
+
+  /* Accent — electric indigo */
+  --accent-1:       #6B7FFF;
+  --accent-2:       #9B6BFF;
+  --accent-glow:    rgba(107, 127, 255, 0.25);
+  --accent-subtle:  rgba(107, 127, 255, 0.08);
+
+  /* Semantic */
+  --success:        #4ADE80;
+  --warning:        #FACC15;
+  --error:          #F87171;
+
+  /* Borders */
+  --border-default: rgba(255, 255, 255, 0.06);
+  --border-strong:  rgba(255, 255, 255, 0.12);
+  --border-accent:  rgba(107, 127, 255, 0.4);
+
+  /* Shadows */
+  --shadow-sm:      0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md:      0 4px 20px rgba(0,0,0,0.5);
+  --shadow-lg:      0 12px 40px rgba(0,0,0,0.7);
+  --shadow-accent:  0 0 40px rgba(107, 127, 255, 0.2);
+
+  /* Gradients */
+  --grad-hero:      linear-gradient(135deg, #080B10 0%, #0E1320 60%, #0a0e1a 100%);
+  --grad-accent:    linear-gradient(135deg, #6B7FFF 0%, #9B6BFF 100%);
+  --grad-card:      linear-gradient(145deg, #141A28 0%, #0E1320 100%);
+
+  /* Nav */
+  --nav-bg:         rgba(8, 11, 16, 0.85);
+}
+
+/* ── Light theme ── */
+[data-theme="light"] {
+  /* Surface */
+  --bg-base:        #F5F7FF;
+  --bg-surface:     #FFFFFF;
+  --bg-elevated:    #EEF1FB;
+  --bg-overlay:     #E4E9F8;
+
+  /* Text */
+  --text-primary:   #0D1224;
+  --text-secondary: #4B5880;
+  --text-muted:     #9BA8C8;
+  --text-inverse:   #FFFFFF;
+
+  /* Accent — same hue, richer */
+  --accent-1:       #4A5FE8;
+  --accent-2:       #7B4FDF;
+  --accent-glow:    rgba(74, 95, 232, 0.2);
+  --accent-subtle:  rgba(74, 95, 232, 0.07);
+
+  /* Semantic */
+  --success:        #16A34A;
+  --warning:        #D97706;
+  --error:          #DC2626;
+
+  /* Borders */
+  --border-default: rgba(13, 18, 36, 0.07);
+  --border-strong:  rgba(13, 18, 36, 0.14);
+  --border-accent:  rgba(74, 95, 232, 0.35);
+
+  /* Shadows */
+  --shadow-sm:      0 1px 3px rgba(13,18,36,0.08);
+  --shadow-md:      0 4px 20px rgba(13,18,36,0.1);
+  --shadow-lg:      0 12px 40px rgba(13,18,36,0.15);
+  --shadow-accent:  0 0 40px rgba(74, 95, 232, 0.12);
+
+  /* Gradients */
+  --grad-hero:      linear-gradient(135deg, #F5F7FF 0%, #EEF1FB 60%, #E8EDFB 100%);
+  --grad-accent:    linear-gradient(135deg, #4A5FE8 0%, #7B4FDF 100%);
+  --grad-card:      linear-gradient(145deg, #FFFFFF 0%, #F0F3FC 100%);
+
+  /* Nav */
+  --nav-bg:         rgba(245, 247, 255, 0.9);
+}
+
+/* ── Typography ── */
+:root {
+  --font-display:   'Syne', sans-serif;
+  --font-body:      'Inter', sans-serif;
+  --font-mono:      'JetBrains Mono', monospace;
+
+  /* Scale — mobile-first (clamp for fluid type) */
+  --text-xs:        0.75rem;      /* 12px */
+  --text-sm:        0.875rem;     /* 14px */
+  --text-base:      1rem;         /* 16px */
+  --text-lg:        1.125rem;     /* 18px */
+  --text-xl:        1.25rem;      /* 20px */
+  --text-2xl:       1.5rem;       /* 24px */
+  --text-3xl:       clamp(1.75rem, 3.5vw, 2.25rem);
+  --text-4xl:       clamp(2rem, 5vw, 3rem);
+  --text-hero:      clamp(2.5rem, 8vw, 5.5rem);
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Layout */
+  --max-width:   1280px;
+  --nav-height:  68px;
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast:   150ms;
+  --duration-base:   250ms;
+  --duration-slow:   400ms;
+}

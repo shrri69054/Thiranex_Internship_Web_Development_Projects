@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alex Rivera — Full-Stack Engineer & UI Architect crafting performant, accessible digital products." />
+  <title>Alex Rivera · Engineer & Architect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ══════════ NAV ══════════ -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Primary navigation">
+      <a href="#hero" class="nav-logo" aria-label="Alex Rivera — home">
+        <span class="logo-mark">AR</span>
+        <span class="logo-text">Alex Rivera</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link nav-link--cta">Hire me</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour scheme" type="button">
+          <span class="theme-icon theme-icon--light" aria-hidden="true">☀</span>
+          <span class="theme-icon theme-icon--dark" aria-hidden="true">◑</span>
+        </button>
+        <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" hidden>
+      <ul role="list">
+        <li><a href="#work" class="mob-link">Work</a></li>
+        <li><a href="#skills" class="mob-link">Skills</a></li>
+        <li><a href="#about" class="mob-link">About</a></li>
+        <li><a href="#contact" class="mob-link mob-link--cta">Hire me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow" aria-hidden="true">Full-Stack Engineer · UI Architect</p>
+          <h1 class="hero-heading" id="hero-heading">
+            <span class="hero-line hero-line--1">Building</span>
+            <span class="hero-line hero-line--2">systems that</span>
+            <span class="hero-line hero-line--accent">scale.</span>
+          </h1>
+          <p class="hero-body">
+            I design and engineer digital products from concept to production — obsessing over performance, accessibility, and the 1 % details that make users trust what they touch.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn--primary">View my work</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="code-window">
+            <div class="code-window__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="code-window__title">portfolio.ts</span>
+            </div>
+            <pre class="code-block"><code><span class="c-kw">const</span> <span class="c-var">engineer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">"Alex Rivera"</span>,
+  <span class="c-prop">stack</span>: [
+    <span class="c-str">"TypeScript"</span>, <span class="c-str">"React"</span>,
+    <span class="c-str">"Node.js"</span>, <span class="c-str">"PostgreSQL"</span>,
+    <span class="c-str">"Docker"</span>, <span class="c-str">"AWS"</span>
+  ],
+  <span class="c-prop">available</span>: <span class="c-bool">true</span>,
+  <span class="c-prop">passion</span>: <span class="c-str">"clean abstractions"</span>
+}
+
+<span class="c-kw">export default</span> engineer;</code></pre>
+          </div>
+          <div class="hero-stat-cluster">
+            <div class="stat-chip">
+              <span class="stat-chip__num">47</span>
+              <span class="stat-chip__lbl">shipped products</span>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-chip__num">8yr</span>
+              <span class="stat-chip__lbl">experience</span>
+            </div>
+            <div class="stat-chip">
+              <span class="stat-chip__num">99</span>
+              <span class="stat-chip__lbl">Lighthouse avg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span class="scroll-cue__label">scroll</span>
+        <span class="scroll-cue__line"></span>
+      </div>
+    </section>
+
+    <!-- ══════════ MARQUEE ══════════ -->
+    <div class="marquee-band" aria-hidden="true">
+      <div class="marquee-track">
+        <span>TypeScript</span><span class="sep">·</span>
+        <span>React</span><span class="sep">·</span>
+        <span>Next.js</span><span class="sep">·</span>
+        <span>Node.js</span><span class="sep">·</span>
+        <span>GraphQL</span><span class="sep">·</span>
+        <span>PostgreSQL</span><span class="sep">·</span>
+        <span>Docker</span><span class="sep">·</span>
+        <span>AWS</span><span class="sep">·</span>
+        <span>CSS Grid</span><span class="sep">·</span>
+        <span>Figma</span><span class="sep">·</span>
+        <span>TypeScript</span><span class="sep">·</span>
+        <span>React</span><span class="sep">·</span>
+        <span>Next.js</span><span class="sep">·</span>
+        <span>Node.js</span><span class="sep">·</span>
+        <span>GraphQL</span><span class="sep">·</span>
+        <span>PostgreSQL</span><span class="sep">·</span>
+        <span>Docker</span><span class="sep">·</span>
+        <span>AWS</span><span class="sep">·</span>
+        <span>CSS Grid</span><span class="sep">·</span>
+        <span>Figma</span><span class="sep">·</span>
+      </div>
+    </div>
+
+    <!-- ══════════ WORK ══════════ -->
+    <section class="section work-section" id="work" aria-labelledby="work-heading">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-eyebrow">Selected work</p>
+          <h2 class="section-title" id="work-heading">Projects that shipped</h2>
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project-card project-card--featured" aria-label="Orbit Design System">
+            <div class="project-card__media">
+              <div class="project-card__visual project-card__visual--orbit" aria-hidden="true">
+                <div class="orbit-demo">
+                  <div class="orbit-ring orbit-ring--1"></div>
+                  <div class="orbit-ring orbit-ring--2"></div>
+                  <div class="orbit-core"></div>
+                  <div class="orbit-dot orbit-dot--1"></div>
+                  <div class="orbit-dot orbit-dot--2"></div>
+                  <div class="orbit-dot orbit-dot--3"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">Design System</span>
+                <span class="tag">React</span>
+                <span class="tag">Storybook</span>
+              </div>
+              <h3 class="project-card__title">Orbit Design System</h3>
+              <p class="project-card__desc">A headless, themeable component library serving 12 product teams. Zero-runtime CSS-in-JS, WCAG 2.1 AA throughout, and a token pipeline synced directly from Figma.</p>
+              <div class="project-card__footer">
+                <a href="#" class="project-link" aria-label="View Orbit Design System case study">Case study →</a>
+                <a href="#" class="project-link project-link--dim" aria-label="Orbit on GitHub">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-label="Pulse Analytics Dashboard">
+            <div class="project-card__media">
+              <div class="project-card__visual project-card__visual--pulse" aria-hidden="true">
+                <div class="pulse-demo">
+                  <div class="pulse-bar" style="--h:60%"></div>
+                  <div class="pulse-bar" style="--h:85%"></div>
+                  <div class="pulse-bar" style="--h:45%"></div>
+                  <div class="pulse-bar" style="--h:70%"></div>
+                  <div class="pulse-bar" style="--h:90%"></div>
+                  <div class="pulse-bar" style="--h:55%"></div>
+                  <div class="pulse-bar" style="--h:75%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">Next.js</span>
+                <span class="tag">D3</span>
+                <span class="tag">WebSockets</span>
+              </div>
+              <h3 class="project-card__title">Pulse Analytics</h3>
+              <p class="project-card__desc">Real-time SaaS dashboard processing 2M events/day. Sub-100 ms P95 latency via edge streaming and aggressive client-side caching.</p>
+              <div class="project-card__footer">
+                <a href="#" class="project-link">Case study →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-label="Cartographer Maps API">
+            <div class="project-card__media">
+              <div class="project-card__visual project-card__visual--map" aria-hidden="true">
+                <div class="map-demo">
+                  <div class="map-grid">
+                    <div class="map-cell map-cell--hi"></div>
+                    <div class="map-cell"></div>
+                    <div class="map-cell map-cell--mid"></div>
+                    <div class="map-cell map-cell--hi"></div>
+                    <div class="map-cell map-cell--mid"></div>
+                    <div class="map-cell map-cell--lo"></div>
+                    <div class="map-cell"></div>
+                    <div class="map-cell map-cell--hi"></div>
+                    <div class="map-cell map-cell--mid"></div>
+                  </div>
+                  <div class="map-pin">📍</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">Go</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Redis</span>
+              </div>
+              <h3 class="project-card__title">Cartographer API</h3>
+              <p class="project-card__desc">High-throughput geospatial REST API serving 50k req/s with spatial indexing, tile caching, and multi-tenant auth.</p>
+              <div class="project-card__footer">
+                <a href="#" class="project-link">Case study →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" aria-label="Seedling E-commerce Platform">
+            <div class="project-card__media">
+              <div class="project-card__visual project-card__visual--shop" aria-hidden="true">
+                <div class="shop-demo">
+                  <div class="shop-card"></div>
+                  <div class="shop-card shop-card--back"></div>
+                  <div class="shop-badge">NEW</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="tag">React</span>
+                <span class="tag">Stripe</span>
+                <span class="tag">Sanity</span>
+              </div>
+              <h3 class="project-card__title">Seedling Commerce</h3>
+              <p class="project-card__desc">Headless storefront hitting 99 Lighthouse on mobile. Edge-rendered PDPs, optimistic cart, and a custom CMS workflow for non-technical merchants.</p>
+              <div class="project-card__footer">
+                <a href="#" class="project-link">Case study →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SKILLS ══════════ -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="section-inner">
+        <header class="section-header">
+          <p class="section-eyebrow">Capabilities</p>
+          <h2 class="section-title" id="skills-heading">Where I operate</h2>
+        </header>
+
+        <div class="skills-layout">
+          <div class="skill-pillar">
+            <div class="skill-pillar__icon" aria-hidden="true">⬡</div>
+            <h3 class="skill-pillar__title">Frontend</h3>
+            <ul class="skill-list" role="list">
+              <li>React / Next.js</li>
+              <li>TypeScript</li>
+              <li>CSS Grid & Flexbox</li>
+              <li>Web performance</li>
+              <li>Accessibility (WCAG)</li>
+              <li>Animation & motion</li>
+            </ul>
+            <div class="skill-bar-group">
+              <div class="skill-bar" style="--level: 96%">
+                <span class="skill-bar__label">React</span>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" style="--level: 92%">
+                <span class="skill-bar__label">CSS / Design</span>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pillar">
+            <div class="skill-pillar__icon" aria-hidden="true">⬡</div>
+            <h3 class="skill-pillar__title">Backend</h3>
+            <ul class="skill-list" role="list">
+              <li>Node.js / Go</li>
+              <li>REST & GraphQL APIs</li>
+              <li>PostgreSQL / Redis</li>
+              <li>Event-driven systems</li>
+              <li>Auth & security</li>
+              <li>API design</li>
+            </ul>
+            <div class="skill-bar-group">
+              <div class="skill-bar" style="--level: 88%">
+                <span class="skill-bar__label">Node.js / Go</span>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" style="--level: 85%">
+                <span class="skill-bar__label">Databases</span>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-pillar">
+            <div class="skill-pillar__icon" aria-hidden="true">⬡</div>
+            <h3 class="skill-pillar__title">Infrastructure</h3>
+            <ul class="skill-list" role="list">
+              <li>AWS / GCP</li>
+              <li>Docker & Kubernetes</li>
+              <li>CI/CD pipelines</li>
+              <li>Observability</li>
+              <li>Edge networking</li>
+              <li>Cost optimisation</li>
+            </ul>
+            <div class="skill-bar-group">
+              <div class="skill-bar" style="--level: 80%">
+                <span class="skill-bar__label">Cloud (AWS/GCP)</span>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+              <div class="skill-bar" style="--level: 78%">
+                <span class="skill-bar__label">DevOps</span>
+                <div class="skill-bar__track"><div class="skill-bar__fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ ABOUT ══════════ -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div class="about-portrait" aria-hidden="true">
+            <div class="portrait-frame">
+              <div class="portrait-initials">AR</div>
+            </div>
+            <div class="portrait-decoration"></div>
+          </div>
+          <div class="about-content">
+            <p class="section-eyebrow">About</p>
+            <h2 class="section-title" id="about-heading">I build things that last</h2>
+            <p class="about-body">Eight years ago I wrote my first broken CSS float. Today I architect distributed systems and component libraries used by millions — but I still care just as much about whether a hover state feels right.</p>
+            <p class="about-body">My background straddles design and engineering, which means I'm as comfortable in a Figma file as in a terminal. I believe the best products come from engineers who understand intent and designers who understand constraints.</p>
+            <p class="about-body">Currently open to senior IC and staff-level roles at product-driven companies. Remote-first preferred.</p>
+
+            <div class="about-details">
+              <div class="detail-item">
+                <span class="detail-label">Location</span>
+                <span class="detail-value">San Francisco, CA (UTC–8)</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Status</span>
+                <span class="detail-value detail-value--avail">● Available for hire</span>
+              </div>
+              <div class="detail-item">
+                <span class="detail-label">Focus</span>
+                <span class="detail-value">Product engineering · Design systems</span>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#" class="btn btn--primary" download>Download résumé</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <div class="contact-grid">
+          <div class="contact-intro">
+            <p class="section-eyebrow">Contact</p>
+            <h2 class="contact-heading" id="contact-heading">Let's build something together</h2>
+            <p class="contact-body">Whether you have a project in mind, a role to fill, or just want to compare notes on CSS architecture — I read every message.</p>
+            <ul class="contact-links" role="list">
+              <li><a href="mailto:alex@example.com" class="contact-link">alex@example.com ↗</a></li>
+              <li><a href="https://github.com" class="contact-link" rel="noopener">GitHub ↗</a></li>
+              <li><a href="https://linkedin.com" class="contact-link" rel="noopener">LinkedIn ↗</a></li>
+            </ul>
+          </div>
+
+          <form class="contact-form" novalidate aria-label="Send a message">
+            <div class="field-group">
+              <label class="field-label" for="name">Name</label>
+              <input class="field-input" type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="email">Email</label>
+              <input class="field-input" type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="message">Message</label>
+              <textarea class="field-input field-input--textarea" id="message" name="message" rows="5" placeholder="Tell me about the project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send message →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Alex Rivera. Built with semantic HTML, CSS Grid, and zero frameworks.</p>
+      <p class="footer-made">Designed & coded by hand ·
+        <a href="#hero" class="footer-back">Back to top ↑</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

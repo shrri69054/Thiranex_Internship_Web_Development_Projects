@@ -1,0 +1,138 @@
+/* ═══════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════ */
+
+/* ── Keyframes ── */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.1); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes orbit1 {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateY(-50px); }
+  to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-50px); }
+}
+
+@keyframes orbit2 {
+  from { transform: translate(-50%, -50%) rotate(0deg) translateY(-75px); }
+  to   { transform: translate(-50%, -50%) rotate(360deg) translateY(-75px); }
+}
+
+@keyframes orbit3 {
+  0%   { transform: translate(calc(-50% + 40px), calc(-50% + 30px)); }
+  50%  { transform: translate(calc(-50% - 40px), calc(-50% - 30px)); }
+  100% { transform: translate(calc(-50% + 40px), calc(-50% + 30px)); }
+}
+
+@keyframes pulseBar {
+  0%, 100% { opacity: 0.7; }
+  50%       { opacity: 1; transform: scaleY(1.08); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, -50%); }
+  50%       { transform: translate(-50%, calc(-50% - 8px)); }
+}
+
+/* ── Page load reveal ── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Scroll-triggered reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease-out),
+              transform 0.6s var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── Hero stagger ── */
+.hero-content .hero-eyebrow {
+  animation: fadeInUp 0.7s var(--ease-out) 0.1s both;
+}
+
+.hero-content .hero-heading {
+  animation: fadeInUp 0.7s var(--ease-out) 0.2s both;
+}
+
+.hero-content .hero-body {
+  animation: fadeInUp 0.7s var(--ease-out) 0.35s both;
+}
+
+.hero-content .hero-actions {
+  animation: fadeInUp 0.7s var(--ease-out) 0.45s both;
+}
+
+.hero-visual {
+  animation: fadeInUp 0.8s var(--ease-out) 0.3s both;
+}
+
+.scroll-cue {
+  animation: fadeIn 1s var(--ease-out) 1.2s both;
+}
+
+/* ── Project card stagger ── */
+.projects-grid .project-card:nth-child(1) { transition-delay: 0s; }
+.projects-grid .project-card:nth-child(2) { transition-delay: 0.08s; }
+.projects-grid .project-card:nth-child(3) { transition-delay: 0.16s; }
+.projects-grid .project-card:nth-child(4) { transition-delay: 0.24s; }
+
+/* ── Reduced motion: disable all animations ── */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track   { animation: none; }
+  .orbit-ring      { animation: none; }
+  .orbit-dot       { animation: none; }
+  .pulse-bar       { animation: none; }
+  .map-pin         { animation: none; }
+  .scroll-cue__line { animation: none; }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-content .hero-eyebrow,
+  .hero-content .hero-heading,
+  .hero-content .hero-body,
+  .hero-content .hero-actions,
+  .hero-visual,
+  .scroll-cue {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
